@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--标题-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/yello_normal">
+
+        <!--标题左边布局-->
+        <ImageView
+            android:id="@+id/left_iv"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/left_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_title"
+            android:textSize="@dimen/text_title"/>
+
+        <!--标题中间布局-->
+        <TextView
+            android:id="@+id/center_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_title"
+            android:textSize="@dimen/text_title"/>
+
+        <!--标题右边布局-->
+        <ImageView
+            android:id="@+id/right_iv"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/right_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:visibility="visible"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/black_title"
+            android:textSize="@dimen/text_title"/>
+    </RelativeLayout>
+</RelativeLayout>

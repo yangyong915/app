@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_si_xin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.example.administrator.myapplication.view.TitleView
+        android:id="@+id/okgo_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.example.administrator.myapplication.view.TitleView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>
+
