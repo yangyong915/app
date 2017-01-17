@@ -1,5 +1,6 @@
 package com.example.administrator.myapplication.utils;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.util.Log;
 import android.widget.ImageView;
@@ -16,12 +17,12 @@ import okhttp3.Response;
 
 public class ImageUtils {
 
-    public static void setImage(final ImageView img, String url) {
-        OkGo.post(url)
+    public static void setImage(Activity activity, final ImageView img, String url) {
+        OkGo.get(url)
+                .tag(activity)
                 .execute(new BitmapCallback() {
                     @Override
                     public void onSuccess(Bitmap bitmap, Call call, Response response) {
-                        Log.i("main", "success bitmap:" + bitmap);
                         img.setImageBitmap(bitmap);
                     }
                 });

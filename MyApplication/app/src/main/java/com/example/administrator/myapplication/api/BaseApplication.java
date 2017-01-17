@@ -22,8 +22,8 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+//        init_x5(); //x5 腾讯浏览器内核注册
         init_okGo();
-        init_x5(); //x5 腾讯浏览器内核注册
     }
 
     private void init_okGo() {

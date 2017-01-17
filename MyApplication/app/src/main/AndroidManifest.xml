@@ -9,6 +9,18 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,8 +34,81 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.okgo.OkgoActivity"></activity>
-        <activity android:name=".activity.webview.X5WebViewActivity"></activity>
+        <activity android:name=".activity.okgo.OkgoActivity" />
+        <activity android:name=".activity.webview.X5WebViewActivity" />
+        <activity
+            android:name=".activity.simple.ItemListActivity"
+            android:label="@string/title_item_list"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.simple.ItemDetailActivity"
+            android:label="@string/title_item_detail"
+            android:parentActivityName=".activity.simple.ItemListActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.administrator.myapplication.activity.simple.ItemListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.simple.BasicActivity"
+            android:label="@string/title_activity_basic"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.simple.EmptyActivity" />
+        <activity
+            android:name=".activity.simple.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_fullscreen"
+            android:theme="@style/FullscreenTheme" />
+        <!-- This meta-data tag is required to use Google Play Services. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".activity.simple.AdMobActivity"
+            android:label="@string/title_activity_ad_mob" /> <!-- Include the AdActivity configChanges and theme. -->
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activity.simple.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".activity.simple.DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.simple.ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.simple.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".activity.simple.TabActivity"
+            android:label="@string/title_activity_tab"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.mio.MioActivity"
+            android:label="@string/title_activity_mio"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.mio.DetailActivity"
+            android:label="@string/title_activity_detail"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

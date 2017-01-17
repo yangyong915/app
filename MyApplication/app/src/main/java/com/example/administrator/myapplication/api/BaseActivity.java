@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.administrator.myapplication.p.BasePresenter;
+import com.lzy.okgo.OkGo;
 
 /**
  * Created on 2017/1/4.

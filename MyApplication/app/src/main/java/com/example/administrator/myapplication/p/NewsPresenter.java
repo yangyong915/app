@@ -12,6 +12,7 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
+import com.lzy.okgo.convert.StringConvert;
 
 import org.json.JSONObject;
 
@@ -20,15 +21,18 @@ import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Response;
+import rx.Subscription;
+import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by yy on 2016/12/22.
  */
 
-public class NewsPresenter extends BasePresenter<INewsView>{
+public class NewsPresenter extends BasePresenter<INewsView> {
 
     private static final String TAG = "NewsPresenter";
     private INewsView mINewsView;
+    private CompositeSubscription compositeSubscription;
 
     public NewsPresenter(INewsView newsView) {
         mINewsView = newsView;
@@ -38,7 +42,7 @@ public class NewsPresenter extends BasePresenter<INewsView>{
         mINewsView.showLoading();
         try {
             HashMap<String, Object> params = new HashMap<>();
-            params.put("page", 1);
+            params.put("page", page);
             params.put("nonce_str", MD5.getMessageDigest(String.valueOf(System.currentTimeMillis()).getBytes()));
             JSONObject jsonObject = new JSONObject(params);
             Log.i(TAG, "req:" + jsonObject.toString());
@@ -72,8 +76,20 @@ public class NewsPresenter extends BasePresenter<INewsView>{
                         }
                     });
 
+            //rxAndroid +okgo
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void addSubscribe(Subscription subscription) {
+        if (compositeSubscription == null) {
+            compositeSubscription = new CompositeSubscription();
+        }
+        compositeSubscription.add(subscription);
+    }
+
+    public void unSubscribe() {
+        if (compositeSubscription != null) compositeSubscription.unsubscribe();
     }
 }

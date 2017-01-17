@@ -9,19 +9,6 @@ import java.io.Serializable;
   */
 
 public class NewsList implements Serializable {
-
-    /**
-     * news_id : 2
-     * title : 资讯2
-     * intro : PHP，即“PHP: Hypertext Preprocessor”，是一种被广泛应用的开源通用脚本语言，尤其适用于 Web 开发并可嵌入 HTML 中去。
-     * cover : e8b8ec28054a32d0170e474729f083b3
-     * source : 原创
-     * datetime : 2016-10-11 14:29:35
-     * view_num : 0
-     * agree_num : 0
-     * comment_num : 200
-     */
-
     private int news_id;
     private String title;
     private String intro;
@@ -102,5 +89,20 @@ public class NewsList implements Serializable {
 
     public void setComment_num(int comment_num) {
         this.comment_num = comment_num;
+    }
+
+    @Override
+    public String toString() {
+        return "NewsList{" +
+                "news_id=" + news_id +
+                ", title='" + title + '\'' +
+                ", intro='" + intro + '\'' +
+                ", cover='" + cover + '\'' +
+                ", source='" + source + '\'' +
+                ", datetime='" + datetime + '\'' +
+                ", view_num=" + view_num +
+                ", agree_num=" + agree_num +
+                ", comment_num=" + comment_num +
+                '}';
     }
 }
