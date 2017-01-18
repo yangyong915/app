@@ -108,7 +108,12 @@
         <activity
             android:name=".activity.mio.DetailActivity"
             android:label="@string/title_activity_detail"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.Rxjava.RxActivity"
+            android:label="@string/title_activity_rx"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.Rxjava.BaseRxActivity"></activity>
     </application>
 
 </manifest>

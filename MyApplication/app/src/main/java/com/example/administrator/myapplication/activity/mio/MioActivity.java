@@ -83,18 +83,6 @@ public class MioActivity extends AppCompatActivity
 
         });
         tabLayout.setupWithViewPager(viewPager);
-//        LayoutInflater mLayoutInflater = this.getLayoutInflater();
-//        for (int i = 0; i < 4; i++) {
-//            TabLayout.Tab tab = tabLayout.newTab();
-//
-//            View view = mLayoutInflater.inflate(R.layout.main_tab, null);
-//            tab.setCustomView(view);
-//
-//            TextView text = (TextView) view.findViewById(R.id.tab_text);
-//            text.setText(mTitles[i]);
-//            ImageView image = (ImageView) view.findViewById(R.id.tab_img);
-//            tabLayout.addTab(tab);
-//        }
         one = tabLayout.getTabAt(0);
         two = tabLayout.getTabAt(1);
         three = tabLayout.getTabAt(2);

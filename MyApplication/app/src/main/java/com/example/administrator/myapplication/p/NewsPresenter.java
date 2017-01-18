@@ -1,6 +1,5 @@
 package com.example.administrator.myapplication.p;
 
-import android.content.Context;
 import android.util.Log;
 
 import com.example.administrator.myapplication.model.Base;
@@ -12,7 +11,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
-import com.lzy.okgo.convert.StringConvert;
 
 import org.json.JSONObject;
 

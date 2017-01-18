@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import com.example.administrator.myapplication.R;
+import com.example.administrator.myapplication.activity.Rxjava.RxActivity;
 import com.example.administrator.myapplication.activity.mio.MioActivity;
 import com.example.administrator.myapplication.activity.okgo.OkgoActivity;
 import com.example.administrator.myapplication.activity.simple.AdMobActivity;
@@ -57,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, OkgoActivity.class));
                         break;
                     case 2:
-                        startActivity(new Intent(MainActivity.this, X5WebViewActivity.class));
+                        startActivity(new Intent(MainActivity.this, RxActivity.class));
+//                        startActivity(new Intent(MainActivity.this, X5WebViewActivity.class));
                         break;
                     case 4:
                         startActivity(new Intent(MainActivity.this, MioActivity.class));
@@ -121,11 +123,17 @@ public class MainActivity extends AppCompatActivity {
         dol2.setType(1);
         mDatas.add(dol2);
 
-        MainModel dol3 = new MainModel();
-        dol3.setTitle("腾讯X5webview壳");
-        dol3.setDes("比原生的webview更强大");
-        dol3.setType(1);
-        mDatas.add(dol3);
+        MainModel rxdol3 = new MainModel();
+        rxdol3.setTitle("okRx");
+        rxdol3.setDes("okrx用法");
+        rxdol3.setType(1);
+        mDatas.add(rxdol3);
+
+//        MainModel dol3 = new MainModel();
+//        dol3.setTitle("腾讯X5webview壳");
+//        dol3.setDes("比原生的webview更强大");
+//        dol3.setType(1);
+//        mDatas.add(dol3);
 
         MainModel dol4 = new MainModel();
         dol4.setTitle("系统UI案例");
